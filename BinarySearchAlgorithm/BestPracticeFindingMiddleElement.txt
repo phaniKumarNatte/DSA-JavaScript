@@ -1,0 +1,32 @@
+Problem: Compute the floor of the square root of a number x using Binary Search.
+
+Best Practice:  
+When implementing binary search, always calculate the mid-point safely to avoid integer overflow:
+    m = l + (r - l) / 2
+
+Steps:
+1. If x < 2, return x (since sqrt(0) = 0, sqrt(1) = 1).
+2. Set search boundaries: l = 2, r = floor(x / 2).
+3. Calculate mid-point: m = l + floor((r - l) / 2).
+4. Compare m * m with x:
+   - If m * m == x → return m.
+   - If m * m > x → search left → r = m - 1.
+   - If m * m < x → search right → l = m + 1.
+5. Return r at the end → r will be the floor of √x.
+
+Dry Run:
+
+Input: x = 4
+l = 2, r = 2 → m = 2
+2 * 2 = 4 → return 2
+Output: 2
+
+Input: x = 8
+l = 2, r = 4 → m = 3 → 3*3 = 9 > 8 → r = 2
+l = 2, r = 2 → m = 2 → 2*2 = 4 < 8 → l = 3
+Loop ends → return r = 2
+Output: 2
+
+Complexity:
+- Time: O(log x)
+- Space: O(1)

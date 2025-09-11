@@ -1,0 +1,24 @@
+// // 1
+// // 0 1
+// // 0 1 0 
+// // 1 0 1 0
+// // 1 0 1 0 1
+
+
+// let n = 5;
+
+// if (typeof n !== 'number' || isNaN(n) || !Number.isInteger(n)) {
+//     console.log('n should be an integer');
+// } else if (n <= 0) {
+//     console.log('n should be greater than 0');
+// } else {
+//     let flag = 1; // can start from 0 or 1 depending on pattern
+//     for (let i = 0; i < n; i++) {
+//         let row = [];
+//         for (let j = 0; j <= i; j++) {
+//             row.push(flag);
+//             flag = 1 - flag; // toggles between 1 and 0
+//         }
+//         console.log(row.join(" "));
+//     }
+// }
