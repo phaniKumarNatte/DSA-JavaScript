@@ -15,7 +15,7 @@ To strengthen my **problem-solving and algorithmic knowledge**, I practice **DSA
 Welcome! This repository is organized topic-wise to help you practice DSA in a **structured learning path**.  
 If you are following along, here’s the **recommended order of study**:
 
----
+--- 
 
 ## 📂 Study Guide
 
