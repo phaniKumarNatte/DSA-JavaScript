@@ -183,8 +183,9 @@ But if num1 = {1, 5} and num2 = {1, 2, 3, 4}, then num1 is not a subset of num2 
 
 ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== 
 remember this : next grater , next small, previous small, previous grater alway use stack 
-Remember This.Binary Search : Binary Search is only applicable for sorted arrays
+Remember This.Binary Search : Binary Search is only applicable for sorted arrays.
 Distinct values means values that are unique—no duplicates.
+NOTE : Two-pointer only works on sorted arrays.
 
 ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== 
 
@@ -209,5 +210,29 @@ Example: [1, 2, 2, 3, 3] ✅
 
 
 // The Math.max() function is used to find the largest (maximum) number from a list of numbers.
-// ✅ Syntax:
-// Math.max(number1, number2, ..., numberN) -->
+✅ Syntax:
+// Math.max(number1, number2, ..., numberN) 
+
+==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== 
+Math.abs() in JavaScript
+The Math.abs() function returns the absolute value of a number.
+
+👉 The absolute value means the number without its sign.
+👉 If the number is positive, it stays the same.
+👉 If the number is negative, it becomes positive.
+👉 If the number is 0, it stays 0.
+
+Syntax : 
+Math.abs(x)
+
+console.log(Math.abs(5));     // 5   (positive stays positive)
+console.log(Math.abs(-5));    // 5   (negative becomes positive)
+console.log(Math.abs(0));     // 0
+console.log(Math.abs(-0));    // 0
+console.log(Math.abs("10"));  // 10  (string converted to number)
+console.log(Math.abs("abc")); // NaN (not a number, result is NaN)
+console.log(Math.abs(null));  // 0   (null converted to 0)
+
+-->
+
+
