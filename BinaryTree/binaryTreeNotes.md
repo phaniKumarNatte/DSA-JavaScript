@@ -259,10 +259,14 @@ console.log(++index); // increases first → prints 2
 console.log(index);   // now index = 2
 
 🧩 Post-increment (index++) vs Pre-increment (++index)
+
+=====================================================================
+
+🌳 What Is a Symmetric Tree?
+
+A Symmetric Tree is a binary tree that looks exactly the same on both left and right sides when divided down the middle.
+✅ Example of a Symmetric Tree : Leet code problem -  101. Symmetric Tree
 --> 
 
 
-
-
-ans[level] = [];
-ans[level].push(); 
+ 
