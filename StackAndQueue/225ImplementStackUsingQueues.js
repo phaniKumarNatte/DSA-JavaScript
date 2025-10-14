@@ -79,3 +79,104 @@ MyStack.prototype.empty = function() {
  * var param_3 = obj.top()
  * var param_4 = obj.empty()
  */
+
+
+// Interview preparation
+
+======================================================================================================
+// why variale this.q = [] why not var q = [] 
+// var MyStack = function() {
+//     this.q = [];
+// }; 
+
+var q = []
+This creates a local variable inside the function.
+Once the function finishes running, q disappears (unless you close over it with a closure).
+It does not belong to the object you’re creating.
+
+this.q = []
+This attaches q as a property of the object instance.
+Every time you do new MyStack(), that object gets its own q array.
+Now you can access it anywhere with this.q.
+
+Example : 
+var MyStack = function() {
+    this.q = [];  // property of the object
+};
+
+let s1 = new MyStack();
+let s2 = new MyStack();
+
+s1.q.push(10);
+console.log(s1.q); // [10]
+console.log(s2.q); // [] (different object, different q)
+
+But if you used var q = [], then s1 and s2 wouldn’t have their own q. You couldn’t even access q from outside.
+
+👉 Real world analogy:
+var q = [] → You just made a temporary list called q. It exists only in that function or block. Once you’re done there, it’s gone.
+this.q = [] → You made a list that is stored inside the object (this). As long as the object exists, the list stays with it.
+
+
+======================================================================================================
+
+What is an object instance?
+
+An object is like a blueprint made real.
+
+The blueprint is the class or constructor function (like MyStack).
+
+An instance is one actual copy of that blueprint you create and use.
+
+Real world analogy 🏠
+
+Think of a blueprint of a house.
+
+The blueprint describes: rooms, windows, doors, etc.
+
+When you actually build a house from that blueprint, that’s an instance.
+
+You can build many houses (instances) from the same blueprint. Each house is separate — paint one red, another blue.
+
+var MyStack = function() {
+    this.q = [];
+};
+
+// let s1 = new MyStack(); // one instance (house 1)
+// let s2 = new MyStack(); // another instance (house 2)
+
+// MyStack = blueprint (constructor).
+
+// s1 and s2 = two instances (real houses).
+
+// Each has its own this.q (like each house has its own furniture).
+
+// An object instance just means one real copy of an object that you created from a template.
+
+======================================================================================================
+// Blueprint → Object → Instance
+
+// Blueprint = the plan (like MyStack function/class).
+
+// It says what the object should look like (what properties, what methods).
+
+// But by itself, it’s just a plan, nothing real yet.
+
+// Object = a thing in memory created from the blueprint.
+
+// When you do new MyStack(), JavaScript creates an object.
+
+// That object will have the properties and methods described in the blueprint.
+
+// Instance = a specific object created from the blueprint.
+
+// s1 is one instance of MyStack.
+
+// s2 is another instance of MyStack.
+
+// Both are objects, but they’re separate copies.
+
+======================================================================================================
+
+// what is this ?
+// In JavaScript, this means the current object that the code is working with.
